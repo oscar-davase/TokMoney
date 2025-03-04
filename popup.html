@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TokMoney</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>TokMoney</h1>
+    </div>
+    
+    <div id="content">
+      <div class="alert-box" id="eligibility-alert">
+        <div class="alert-title">
+          <span class="alert-icon">⚠️</span>
+          <span>Compte non éligible</span>
+        </div>
+        <div class="alert-content" id="eligibility-message">
+          Ce compte ne remplit pas les conditions d'éligibilité à la monétisation TikTok. Les montants affichés sont une estimation de ce qu'il aurait pu générer s'il était éligible.
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h2>Niveau de RPM</h2>
+        <div class="rpm-slider-container">
+          <div class="rpm-labels">
+            <span>Faible</span>
+            <span>Moyen</span>
+            <span>Élevé</span>
+          </div>
+          <div class="rpm-slider">
+            <div class="rpm-track"></div>
+            <div class="rpm-progress"></div>
+            <input type="range" min="0" max="2" step="1" value="1" class="rpm-range" id="rpm-range">
+            <div class="rpm-values">
+              <span>0,20€</span>
+              <span>0,45€</span>
+              <span>0,70€</span>
+            </div>
+          </div>
+        </div>
+        <p class="rpm-info">RPM actuel: <span id="current-rpm">0,45€</span> pour 1000 vues</p>
+        
+        <div class="actions">
+          <button id="refresh-btn">Rafraîchir les estimations</button>
+        </div>
+        
+        <p class="rpm-note">Environ 40% des vues sont considérées comme éligibles</p>
+      </div>
+      
+      <div class="info-box">
+        <h2>Comment ça marche</h2>
+        <ul>
+          <li>Les badges verts montrent les revenus estimés pour les vidéos</li>
+          <li>Les badges rouges (0€) indiquent les contenus non éligibles</li>
+          <li>Faites défiler la page pour voir plus de vidéos et leurs estimations</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p class="disclaimer">Note: Ces estimations sont approximatives et peuvent varier selon plusieurs facteurs.</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
